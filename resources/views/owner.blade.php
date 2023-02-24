@@ -3,7 +3,7 @@
  {{-- <ul> --}}
     @foreach ($result as $person)
  
-    <a href="{{route('owner.details',['id'=>$person->id])}}">{{$person->surname}}</a><br>
+    <a href="{{route('owner.details',$person->id)}}">{{$person->surname}}</a><br>
     
     @endforeach
  {{-- </ul> --}}

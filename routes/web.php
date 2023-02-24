@@ -24,4 +24,5 @@ Route::get('/animal', [AnimalController::class, 'results'])->name('animals.resul
 
 Route::get('/owners/{id}', [OwnerController::class, 'detail'])->name('owner.details');
 Route::get('/owner', [OwnerController::class, 'results'])->name('owners.results');
+Route::post('/owner', [OwnerController::class, 'insert'])->name('owners.insert');
 
