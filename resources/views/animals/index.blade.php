@@ -2,7 +2,7 @@
 
 <ul>
     @foreach ($animals as $animal)
-        <li>{{ $animal->name }}</li>
+        <a href="{{ route('animals.detail', ['id' => $animal->id]) }}">{{ $animal->name }}</a><br>
     @endforeach
 </ul>
 
