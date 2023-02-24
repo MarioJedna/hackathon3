@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    @include('common.messages')
     <form action="{{ route('animals.results') }}" method="GET">
         <label for="dog">Search by animal:</label><br>
         <input type="text" name="animal">
