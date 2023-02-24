@@ -1,5 +1,6 @@
-@include('common.html-start-1')
-<form action="" method=GET>
+@include('common.html-start')
+<form action="{{route('owners.insert')}}" method='POST'>
+    @csrf
 <label for="name">Enter First Name: </label>
 <input type="text" name="name"><br>
 <label for="surname">Enter Last Name: </label>

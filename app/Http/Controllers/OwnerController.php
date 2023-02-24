@@ -34,7 +34,6 @@ class OwnerController extends Controller
     public function insert(Request $request)
     {
         $owner= new Owner();
-
         $owner->first_name = $request->post('name');
         $owner->surname = $request->post('surname');
         $owner->email = $request->post('email');
@@ -45,7 +44,7 @@ class OwnerController extends Controller
 
         session()->flash('success_message', 'The owner has been registered.');
 
-        return route('owner-detail.owner-details', $owner->id);
+        return redirect()->route('owner.details', $owner->id);
     }
     
 }
