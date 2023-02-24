@@ -26,7 +26,11 @@ class OwnerController extends Controller
         return view('owner', compact('result'));
 
     }
-
+    public function create()
+    {
+        $owner = new Owner;
+        return view('owners-create',compact('owner'));
+    }
     public function insert(Request $request)
     {
         $owner= new Owner();
