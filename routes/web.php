@@ -22,5 +22,6 @@ Route::get('/animal/{id}', [AnimalController::class, 'detail'])->name('animals.d
 Route::get('/animal', [AnimalController::class, 'results'])->name('animals.results');
 
 
-Route::get('/owners/{id}', [OwnerController::class, 'detail'])->name('owners.detail');
+Route::get('/owners/{id}', [OwnerController::class, 'detail'])->name('owner.details');
 Route::get('/owner', [OwnerController::class, 'results'])->name('owners.results');
+

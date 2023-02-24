@@ -8,11 +8,12 @@ use Illuminate\Http\Request;
 class OwnerController extends Controller
 {
     
-    public function detail($id,)
+    public function detail($id)
     {
         $search = Owners::findorfail($id);
+       
 
-        return view('owner.detail', compact($search));
+        return view('owner-detail.owner-details', compact('search'));
 
     }
     public function results()
