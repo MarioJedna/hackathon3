@@ -19,4 +19,9 @@ Weight: <input type="number" name="weight" value="{{ old('weight', $animal->weig
 
 </form>
 
+@if (isset($animal->id))
+    <img src="/images/pets/{{ $animal->image->path }}" alt="">
+@endif
+
+
 @include('common.html-end')

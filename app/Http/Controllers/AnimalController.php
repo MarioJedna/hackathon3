@@ -83,7 +83,6 @@ class AnimalController extends Controller
             []
         );
 
-        $animal->image_id = 9999;
         $animal->owner_id = $request->post('owner_id');
         $animal->name = $request->post('name');
         $animal->species = $request->post('species');

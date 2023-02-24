@@ -1,17 +1,5 @@
 @include('common.html-start')
 
-
-
-{{-- // "id" => 2
-// "image_id" => 2
-// "owner_id" => 2
-// "name" => "Ming"
-// "species" => "dog"
-// "breed" => "Affenpinscher"
-// "age" => 5
-// "weight" => 7 --}}
-
-
 <h1>{{ $beast->name }} ({{ $beast->species }})</h1>
 <h3>Breed: </h3>
 <p>{{ $beast->breed }}</p>

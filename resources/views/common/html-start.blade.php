@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
@@ -20,3 +21,10 @@
         <input type="text" name="owner">
         <button>Search</button>
     </form>
+
+    <br>
+
+    <a href="{{ route('owners.create') }}"><button>Register as new Owner</button></a>
+    <a href="{{ route('animals.create') }}"><button>Register your Pet</button></a>
+    <br>
+    <br>
