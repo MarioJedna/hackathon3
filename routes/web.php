@@ -27,3 +27,6 @@ Route::delete('animals/delete/{animalId}', [AnimalController::class, 'delete'])-
 
 Route::get('/owners/{id}', [OwnerController::class, 'detail'])->name('owner.details');
 Route::get('/owner', [OwnerController::class, 'results'])->name('owners.results');
+Route::post('/owner', [OwnerController::class, 'insert'])->name('owners.insert');
+Route::get('/owners-create', [OwnerController::class, 'create'])->name('owners.create');
+
