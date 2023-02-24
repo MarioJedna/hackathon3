@@ -46,6 +46,13 @@ class OwnerController extends Controller
 
         return redirect()->route('owner.details', $owner->id);
     }
+
+    public function edit($id)
+    {
+        $owner = Owner::findOrFail($id);
+        return view('owners-create',compact('owner'));
+        return redirect()->route('owner.details',$owner->id);
+    }
     public function update($id, Request $request)
     {
         $owner= Owner::findOrFail($id);
