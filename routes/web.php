@@ -29,5 +29,5 @@ Route::get('/owners/{id}', [OwnerController::class, 'detail'])->name('owner.deta
 Route::get('/owner', [OwnerController::class, 'results'])->name('owners.results');
 Route::post('/owner', [OwnerController::class, 'insert'])->name('owners.insert');
 Route::get('/owners-create', [OwnerController::class, 'create'])->name('owners.create');
-Route::put('/owners/{id}',[OwnerController::class, 'update'])->name('owner.update');
-
+Route::put('/owners/{id}', [OwnerController::class, 'update'])->name('owner.update');
+Route::get('/owners/{id}/edit', [OwnerController::class, 'edit'])->name('owners.edit');
