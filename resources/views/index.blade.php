@@ -1,3 +1,3 @@
-@include('common.html-start');
+@include('common.html-start')
 
-@include('common.html-end');
+@include('common.html-end')
