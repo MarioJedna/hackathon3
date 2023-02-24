@@ -1,9 +1,11 @@
 @include("common.html-start")
 
- <ul>
+ {{-- <ul> --}}
     @foreach ($result as $person)
-    <li>{{$person->surname}}</li>
+ 
+    <a href="{{route('owners.detail',['id'=>$person->id])}}">{{$person->surname}}</a><br>
+    
     @endforeach
- </ul>
+ {{-- </ul> --}}
 
  @include("common.html-end")
