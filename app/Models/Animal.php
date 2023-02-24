@@ -11,7 +11,7 @@ class Animal extends Model
 
     public function Owner()
     {
-        return $this->belongsTo(Owners::class);
+        return $this->belongsTo(Owner::class);
     }
 
     public function Image()

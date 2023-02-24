@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Owners;
+use App\Models\Owner;
 use Illuminate\Http\Request;
 
 class OwnerController extends Controller
@@ -10,7 +10,7 @@ class OwnerController extends Controller
     
     public function detail($id)
     {
-        $search = Owners::findorfail($id);
+        $search = Owner::findorfail($id);
        
 
         return view('owner-detail.owner-details', compact('search'));
@@ -19,7 +19,7 @@ class OwnerController extends Controller
     public function results()
     {
         $search = $_GET['owner'];
-        $result = Owners::query()->where('surname', 'like', '%' . $search . '%')->orderBy('surname')->get();
+        $result = Owner::query()->where('surname', 'like', '%' . $search . '%')->orderBy('surname')->get();
 
         return view('owner', compact('result'));
 

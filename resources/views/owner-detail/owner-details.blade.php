@@ -13,4 +13,11 @@
     Address: 
     <li>{{$search->address}}</li>    
 </ul>
+
+
+@foreach($search->animal as $animal)
+<li><a href="{{ route('animals.detail', ['id' => $animal->id]) }}">{{ $animal->name }}</a></li>
+
+@endforeach
+
 @include("common.html-end")
