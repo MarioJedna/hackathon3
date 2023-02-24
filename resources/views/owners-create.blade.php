@@ -1,5 +1,10 @@
 @include('common.html-start')
+@if(is_null($owner->id))
 <form action="{{route('owners.insert')}}" method='POST'>
+@else
+<form action="{{route('owners.update')}}" method='POST'>
+    @method('PUT')
+    @endif
     @csrf
 <label for="name">Enter First Name: </label>
 <input type="text" name="name"><br>

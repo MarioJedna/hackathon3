@@ -17,10 +17,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [Controller::class, 'index']);
-
-Route::get('/animal/{id}', [AnimalController::class, 'detail'])->name('animals.detail');
 Route::get('/animal', [AnimalController::class, 'results'])->name('animals.results');
-
+Route::get('/animal/create/', [AnimalController::class, 'create'])->name('animals.create');
+Route::post('/animal/insert', [AnimalController::class, 'insert'])->name('animals.insert');
+Route::get('/animal/{id}', [AnimalController::class, 'detail'])->name('animals.detail');
+Route::get('/animal/{animalId}/edit', [AnimalController::class, 'edit'])->name('animals.edit');
+Route::put('/animals/update/{animalId}', [AnimalController::class, 'update'])->name('animals.update');
+Route::delete('animals/delete/{animalId}', [AnimalController::class, 'delete'])->name('animals.delete');
 
 Route::get('/owners/{id}', [OwnerController::class, 'detail'])->name('owner.details');
 Route::get('/owner', [OwnerController::class, 'results'])->name('owners.results');
