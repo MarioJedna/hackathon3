@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\OwnerController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Controller::class, 'index']);
 
 Route::get('/owners/{id}', [OwnerController::class, 'detail'])->name('owners.detail');
 Route::get('/owner', [OwnerController::class, 'results'])->name('owners.result');
+
